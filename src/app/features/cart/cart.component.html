@@ -1,0 +1,13 @@
+<div class="button-actions">
+  <button class="degrade" (click)="addOneItem()">Add 1 item</button>
+  <input #idToRemove>
+  <button class="degrade" (click)="removeItem(idToRemove.value)">Remove Item</button>
+  <button class="degrade" (click)="clearCart()">Clear Cart</button>
+</div>
+
+<!--Se va a inicializar si está iniciado el cart Items-->
+<div class="cart-items *ngIf=cartItems$">
+  <div *ngFor="let cartItem of cartItems$ | async">
+    {{ cartItem.item.name }}
+  </div>
+</div>
