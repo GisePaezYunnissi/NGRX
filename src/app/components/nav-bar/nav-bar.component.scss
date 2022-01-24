@@ -1,6 +1,6 @@
 .nav-bar{
   background-color: #222;
-  color: rgba(white, 0.87);
+  color: rgba(rgb(75, 201, 240), 0.87);
 
   display: flex;
   padding-left:30px;
@@ -11,11 +11,12 @@
   .menu{
     display: flex;
     font-size: 16px;
-    color: yellow;
     margin-left: 48px;
 
     a{
       margin-left: 16px;
+      text-decoration: none;
+      color: rgb(0, 255, 242);
     }
   }
 }
