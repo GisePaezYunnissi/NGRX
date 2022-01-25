@@ -13,6 +13,7 @@ export const _cartReducer = createReducer(
   on(cartAddItem, (state, {item}) => {
     const items = [...state.items];
     items.push(item);
+
     return {
       //Le doy el valor que tenía antes el estado
       ...state,
@@ -26,18 +27,16 @@ on(cartDeleteItem, (state, { itemId }) => {
   items.splice(itemIndex, 1);
 
   return {
-    //Le doy el valor que tenía antes el estado
     ...state,
     items
-  };//Le asigno lo que me viene en la acción
+  };
 }),
 
 on(cartClear, (state) => {
     return {
-      //Le doy el valor que tenía antes el estado
       ...state,
       items: []
-    };//Le asigno lo que me viene en la acción
+    };
   }),
 );
 

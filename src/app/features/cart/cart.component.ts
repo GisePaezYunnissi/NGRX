@@ -29,7 +29,7 @@ export class CartComponent implements OnInit {
   }
 
   addOneItem(){
-    const item: CartItem = {id: String(this.idSeed), item: {name:`item ${this.idSeed}`}};
+    const item: CartItem = {id: String(this.idSeed), item: {name:`Pelicula ${this.idSeed}`}};
     this.idSeed++;
     this.store.dispatch(cartAddItem({ item }));
   }

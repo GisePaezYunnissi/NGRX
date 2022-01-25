@@ -6,7 +6,7 @@
 </div>
 
 <!--Se va a inicializar si está iniciado el cart Items-->
-<div class="cart-items *ngIf=cartItems$">
+<div class="cart-items" *ngIf= "cartItems$">
   <div *ngFor="let cartItem of cartItems$ | async">
     {{ cartItem.item.name }}
   </div>
